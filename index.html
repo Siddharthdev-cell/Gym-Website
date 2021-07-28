@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Freak</title>
+    <script language="JavaScript">
+        function form() {
+            var name = document.regform.name.value
+            var age = document.regform.age.value
+            var gender = document.regform.gender.value
+            var locality = document.regform.locality.value
+            var mobileno = document.regform.mobileno.value
+            if (name == null) {
+                alert("Name can't be null")
+            }
+            if (age == null || age < 10) {
+                alert("Age can't be null")
+            }
+
+        }
+    </script>
+</head>
+
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /*CSS Reset*/
+    body {
+        font-family: 'Baloo 2', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('img/gym.png');
+        background-repeat: no-repeat;
+        background-size: 1580px 900px;
+    }
+
+    .left {
+        display: inline-block;
+        /* border: 2px solid red; */
+        position: absolute;
+        left: 60px;
+        top: 20px;
+    }
+
+    .left img {
+        width: 120px;
+        height: 90px;
+
+    }
+
+    .left div {
+        font-family: 'Baloo 2', cursive;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .mid {
+        display: block;
+        width: 50%;
+        margin: 29px auto;
+        /* border: 2px solid green; */
+
+    }
+
+    .right {
+        display: inline-block;
+        position: absolute;
+        right: 35px;
+        top: 43px;
+        /* border: 2px solid yellow; */
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 25px;
+    }
+
+    .navbar li a {
+        color: white;
+        padding: 34px 23px;
+        text-decoration: none;
+
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: blue;
+
+    }
+
+    .btn {
+        font-family: 'Baloo 2', cursive;
+        margin: 0px 9px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background-color: grey;
+    }
+
+    .container {
+        /* border: 2px solid white; */
+        margin: 90px 70px;
+        padding: 50px;
+        width: 40%;
+        border-radius: 20px;
+        position: absolute;
+        right: 840px;
+        top: 70px;
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    .form-group input {
+        font-family: 'Baloo 2', cursive;
+        text-align: center;
+        display: block;
+        width: 450px;
+        padding: 4px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 22px;
+        border-radius: 13px;
+    }
+
+    .container button {
+        display: block;
+        width: 75%;
+        margin: 23px auto;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="img/gym logo.png" alt="">
+            <div>Fitness Freak</div>
+
+        </div>
+        <!-- mid box for nav bar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="fitcal.html">Fitness Calculator</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+            <a class="btn" href="tel:+917903741963">Call Us Now</a>
+            <button class="btn" href="">Email Us</button>
+
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join best gym of Patna now</h1>
+        <form action="/sign_up" method="POST">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Locality">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Mobile No.">
+            </div>
+            <button class="btn" type="submit">Submit</button>
+            <button class="btn" type="reset">Reset</button>
+        </form>   
+    </div>
+</body>
+
+</html>

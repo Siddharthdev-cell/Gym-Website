@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Calculator</title>
+
+    <style>
+        body {
+            font-family: 'Baloo 2', cursive;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            background: url('img/gym.png');
+            background-repeat: no-repeat;
+            background-size: 1580px 900px;
+            flex-wrap: nowrap;
+        }
+
+        .left {
+            display: inline-block;
+            /* border: 2px solid red; */
+            position: relative;
+            left: 60px;
+            top: 20px;
+        }
+
+        .left img {
+            width: 120px;
+            height: 90px;
+        }
+
+        .left div {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .mid {
+            display: block;
+            width: 50%;
+            margin: 0px auto;
+            position: relative;
+            bottom: 92px;
+            /* border: 2px solid green; */
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 35px;
+            top: 43px;
+            /* border: 2px solid yellow; */
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 25px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            padding: 34px 23px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .btn {
+            font-family: 'Baloo 2', cursive;
+            margin: 0px 9px;
+            background-color: black;
+            color: white;
+            padding: 4px 14px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: grey;
+        }
+
+        .container {
+            font-family: 'Baloo 2', cursive;
+            /* border: 1px solid white; */
+            font-size: 20px;
+            margin: 50px auto;
+            padding: 4px;
+            border-radius: 7px;
+            height: 350px;
+            position: relative;
+            left: 58px;
+        }
+    </style>
+    <script language="JavaScript">
+        //<!--
+        function calculateBmi() {
+            var weight = document.bmiForm.weight.value
+            var height = document.bmiForm.height.value
+            if (weight > 0 && height > 0) {
+                var finalBmi = weight / (height / 100 * height / 100).toFixed(2);
+                document.bmiForm.bmi.value = finalBmi
+                if (finalBmi < 18.5) {
+                    document.bmiForm.meaning.value = "That you are too thin."
+                }
+                if (finalBmi > 18.5 && finalBmi < 25) {
+                    document.bmiForm.meaning.value = "That you are healthy."
+                }
+                if (finalBmi > 25) {
+                    document.bmiForm.meaning.value = "That you have overweight."
+                }
+            }
+            else {
+                alert("Please Fill in everything correctly")
+            }
+        }
+        //-->
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="img/gym logo.png" alt="Error loading logo">
+            <div>Fitness Freak</div>
+
+        </div>
+        <!-- mid box for nav bar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="fitcal.html" class="active">Fitness Calculator</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+            <a class="btn" href="tel:+917903741963">Call Us Now</a>
+            <button class="btn">Email Us</button>
+
+        </div>
+    </header>
+    <form name="bmiForm">
+        <div class="container">
+            Weight (in kg): <input type="text" name="weight" size="30"><br /><br/>
+            Height (in cm): <input type="text" name="height" size="30"><br /><br/>
+            <input type="button" value="Calculate BMI" class="btn" onClick="calculateBmi()"><br /><br/>
+            Your BMI: <input type="text" name="bmi" size="30"><br /><br/>
+            This Means: <input type="text" name="meaning" size="30"><br /><br/>
+            <input type="reset" class="btn" value="Reset" />
+        </div>
+    </form>
+</body>
+
+</html>

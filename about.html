@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Baloo 2', cursive;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            background: url('img/gym bg.jpg');
+            background-repeat: no-repeat;
+            background-size: 1600px 950px;
+        }
+
+        .left {
+            display: inline-block;
+            /* border: 2px solid red; */
+            position: absolute;
+            left: 60px;
+            top: 20px;
+        }
+
+        .left img {
+            width: 120px;
+            height: 90px;
+
+        }
+
+        .left div {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .mid {
+            display: block;
+            width: 50%;
+            margin: 29px auto;
+            /* border: 2px solid green; */
+
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 35px;
+            top: 43px;
+            /* border: 2px solid yellow; */
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 25px;
+        }
+
+        .navbar li a {
+            color: white;
+            padding: 34px 23px;
+            text-decoration: none;
+
+        }
+
+        .navbar li a:hover, .navbar li a.active {
+            text-decoration: underline;
+            color: blue;
+
+        }
+
+        .btn {
+            font-family: 'Baloo 2', cursive;
+            margin: 0px 9px;
+            background-color: black;
+            color: white;
+            padding: 4px 14px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: grey;
+        }
+
+        .container {
+            font-family: 'Baloo 2', cursive;
+            /* border: 1px solid red; */
+            font-size: 27px;
+            color: white;
+            margin: 60px auto;
+            padding: 4px;
+            border-radius: 7px;
+            height: 750px;
+        }
+        .container button{
+            position: relative;
+            left: 570px;
+            width: 10%;
+            padding: 6px;
+            margin: 23px auto;
+
+        }
+
+        .container h1{
+            color: gold;
+        }
+        .container h6{
+            position: relative;
+            right: 30px;
+            top: 160px;
+            text-align: right;
+            color: royalblue;
+        }
+
+        /* .container img{
+            width: 500px;
+            height: 220px;
+            position: relative;
+            right: 300px;
+        } */
+    </style>
+    <script language="JavaScript">
+        function Regform()
+        {
+            alert("Please fill this registration form")
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="img/gym logo.png" alt="">
+            <div>Fitness Freak</div>
+
+        </div>
+        <!-- mid box for nav bar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="fitcal.html">Fitness Calculator</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+            <a class="btn" href="tel:+917903741963">Call Us Now</a>
+            <button class="btn">Email Us</button>
+
+        </div>
+    </header>
+    <div class="container">
+        <h1>About us</h1>
+        <h4>Want to be healthy and have a perfect body? Then must join Fitness Freak Gym at affordable price with a
+            private professional trainer for each individual. We have all fitness equipments and variety of diet chart
+            which is helpful for a perfect exercise of all types of body. Fitness Freak Gym is the best gym currently in Patna
+            as we provide gym facilities and trainers for all age groups accordingly. We are having different branches in
+            different cities. We also provides you with the facility of BMI calculator as Fitness Calculator. </h4>
+
+        <h6>Designed and Developed By: Siddharth Kumar</h6>
+        <button class="btn" onclick="Regform()"><a href="index.html">Join Now</a></button>  
+    </div>
+</body>
+
+</html>
